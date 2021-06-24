@@ -1,0 +1,93 @@
+body {
+  overflow-x: hidden;
+}
+
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+
+  
+  .iphone6 {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+
+  
+  .iphone6 {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1439px) {
+
+ 
+  .iphone6 {
+    display: none;
+  }
+
+  
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .iphone6 {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .iphone6 {
+    display: none;
+  }
+
+
+  
+
+
+}
+
+
+
+@media (max-width: 767px)  {
+
+  .images_container{
+    display: none;
+  }
+
+  .slider{
+    display: none;
+  }
+
+  .menuha {
+    /* position: absolute; */
+    max-width:100%;
+    height:auto;
+    margin:0;
+    z-index:1;
+  }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 476px) {
+
+  .iphone6 {
+    /* position: absolute; */
+    max-width:100%;
+    height:auto;
+    margin:0;
+    z-index:0;
+  }
+
+
+  .images_container{
+    display: none;
+  }
+  
+}
