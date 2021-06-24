@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Press landing</title>
+  <link rel="stylesheet" href="./stylesheets/style4.css">
+</head>
+
+<body>
+  <div class="img_container">
+  <img class="inshop" src="images/inshop.svg" alt="">
+  <img class="shopsk" src="images/shopsk.svg" alt="">
+  <!-- <img class="podniz7" src="images/podniz7.png" alt=""> -->
+  <img class="bolshe" src="images/bolshe.svg" alt="">
+  
+  <img class="symbols" src="images/symbols.svg" alt="">
+  <img class="heart" src="images/heart.svg" alt="">
+  <img class="telega" src="images/telega.svg" alt="">
+  <img class="love1" src="images/love.svg" alt="">
+  <img class="love2" src="images/love2.svg" alt="">
+  <img class="love3" src="images/love2.svg" alt="">
+  <img class="news2" src="images/newslinemain.svg" alt="">
+</div>
+
+  <div class="menuha">
+    <input type="checkbox" id="menu-toggle"/>
+    <label id="trigger" for="menu-toggle"></label>
+    <label id="burger" for="menu-toggle"></label>
+   <ul id="menu">
+     <li><a href="index.html">ГЛАВНАЯ</a></li>
+     <li><a href="kto.html">КТО МЫ?</a></li>
+     <li><a href="newstoday.html">НОВОСТИ?</a></li>
+     <li><a href="posters.html">ШОК-СОБЫТИЯ</a></li>
+     <li><a href="contacts.html">КОНТАКТЫ</a></li>
+     <li><a href="shop.html">МЕРЧ</a></li>
+   </ul>
+   
+  </div>
+
+
+
+
+  <div class="slider_container">
+  
+    <div class="slider">
+        <div class="item">
+            <img src="images/ibag.svg">
+            <div class="slideText"></div>
+        </div>
+    
+        <div class="item">
+            <img src="images/iochki.svg">
+            <div class="slideText"></div>
+        </div>
+    
+        <div class="item">
+            <img src="images/ishop.svg">
+            <div class="slideText"></div>
+        </div>
+    
+        <div class="item">
+          <img src="images/iposters.svg">
+          <div class="slideText"></div>
+          
+      </div>
+    
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
+    </div>
+    
+    <div class="slider-dots">
+        <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+        <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+        <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    <script>
+    
+      /* Индекс слайда по умолчанию */
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+      function plusSlide() {
+          showSlides(slideIndex += 1);
+      }
+      
+      /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+      function minusSlide() {
+          showSlides(slideIndex -= 1);  
+      }
+      
+      /* Устанавливает текущий слайд */
+      function currentSlide(n) {
+          showSlides(slideIndex = n);
+      }
+      
+      /* Основная функция слайдера */
+      function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("item");
+          var dots = document.getElementsByClassName("slider-dots_item");
+          if (n > slides.length) {
+            slideIndex = 1
+          }
+          if (n < 1) {
+              slideIndex = slides.length
+          }
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+      }
+      
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
