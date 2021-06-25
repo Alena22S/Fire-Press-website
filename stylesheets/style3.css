@@ -430,7 +430,7 @@ body {
   padding-left:0%;
   margin-top:0%;
   opacity: 100%;
-  z-index:0;
+  z-index:1;
 }
 
 
@@ -507,7 +507,7 @@ body {
 }
 
 .ys:hover {
-  opacity: 0;
+  opacity: 100;
 }
 
 .starta {
